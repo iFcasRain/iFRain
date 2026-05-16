@@ -1,4 +1,4 @@
-﻿# 信号与系统 第二章：线性时不变系统
+# 信号与系统 第二章：线性时不变系统
 
 > 公式写法统一为 `$...$`（行内）与 `$$...$$`（独立公式）。  
 > 学习目标：看完这份笔记后，能自己完成“卷积计算 + 性质判断 + 方程求响应”的基础题。
@@ -363,19 +363,19 @@ $$
 
 ## 7.3 由微分和差分方程描述的LTI系统的方框图表示
 
-<img src="/assets/image-20260505174854589.png" alt="image-20260505174854589" style="zoom:67%;" />
+![](/assets/image-20260505174854589.png)
 
-<img src="/assets/image-20260505175108951.png" alt="image-20260505175108951" style="zoom:67%;" />
+![](/assets/image-20260505175108951.png)
 
-<img src="/assets/image-20260505175133586.png" alt="image-20260505175133586" style="zoom:67%;" />
+![](/assets/image-20260505175133586.png)
 
-<img src="/assets/image-20260505175258987.png" alt="image-20260505175258987" style="zoom:67%;" />
+![](/assets/image-20260505175258987.png)
 
-<img src="/assets/image-20260505183327799.png" alt="image-20260505183327799" style="zoom:67%;" />![image-20260505183339973.png](/assets/image-20260505183339973.png)
+![](/assets/image-20260505183327799.png)![image-20260505183339973.png](/assets/image-20260505183339973.png)
 
-<img src="/assets/image-20260505183327799.png" alt="image-20260505183327799" style="zoom:67%;" />![image-20260505183339973.png](/assets/image-20260505183339973.png)
+![](/assets/image-20260505183327799.png)![image-20260505183339973.png](/assets/image-20260505183339973.png)
 
-<img src="/assets/image-20260505183855061.png" alt="image-20260505183855061" style="zoom:67%;" />
+![](/assets/image-20260505183855061.png)
 
 
 
@@ -405,7 +405,7 @@ $$
 
 做变量代换题时很常见。
 
-<img src="/assets/image-20260505202828978.png" alt="image-20260505202828978" style="zoom:50%;" />
+![](/assets/image-20260505202828978.png)
 
 
 
@@ -418,17 +418,17 @@ $$
 
 筛选出负的一阶导是通过分部积分法推导出来的
 
-<img src="/assets/image-20260505210423532.png" alt="image-20260505210423532" style="zoom:50%;" />
+![](/assets/image-20260505210423532.png)
 
 卷积时反转使得筛选出的负号变正
 
-<img src="/assets/image-20260505210505965.png" alt="image-20260505210505965" style="zoom:67%;" />
+![](/assets/image-20260505210505965.png)
 
-<img src="/assets/image-20260505210650910.png" alt="image-20260505210650910" style="zoom:67%;" />
+![](/assets/image-20260505210650910.png)
 
 ## 8.5 单位斜坡
 
-<img src="/assets/image-20260505210839183.png" alt="image-20260505210839183" style="zoom:67%;" />
+![](/assets/image-20260505210839183.png)
 
 ---
 

@@ -1,32 +1,649 @@
+/**
+ * Pink-Cat-Boo 风格配色
+ * 参考 VS Code 主题：玫瑰粉 / 淡紫 / 香蕉黄 / 天蓝
+ * https://marketplace.visualstudio.com/items?itemName=ftsamoyed.theme-pink-cat-boo
+ */
 :root {
   --vp-font-family-base: 'Noto Sans SC', ui-sans-serif, system-ui, sans-serif;
   --vp-font-family-mono: 'JetBrains Mono', ui-monospace, monospace;
-  --vp-c-brand-1: #3b82f6;
-  --vp-c-brand-2: #2563eb;
-  --vp-c-brand-3: #1d4ed8;
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(120deg, #3b82f6 30%, #8b5cf6);
+
+  /* Pink-Cat-Boo 色板 */
+  --pcb-pink: #f78fb3;
+  --pcb-pink-deep: #e056a0;
+  --pcb-purple: #c39bd3;
+  --pcb-purple-deep: #9b59b6;
+  --pcb-yellow: #ffeaa7;
+  --pcb-sky: #74b9ff;
+  --pcb-cream: #fff8fb;
+  --pcb-blush: #fdf0f6;
+  --pcb-lilac: #f0e6f8;
+
+  --vp-c-brand-1: var(--pcb-pink);
+  --vp-c-brand-2: var(--pcb-pink-deep);
+  --vp-c-brand-3: #d63384;
+  --vp-c-brand-soft: rgba(247, 143, 179, 0.18);
+
+  --vp-c-bg: var(--pcb-cream);
+  --vp-c-bg-alt: var(--pcb-blush);
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: var(--pcb-blush);
+  --vp-c-bg-mute: var(--pcb-lilac);
+
+  --vp-c-text-1: #4a3f55;
+  --vp-c-text-2: #6c5f7a;
+  --vp-c-text-3: #a89bb8;
+
+  --vp-c-divider: rgba(195, 155, 211, 0.4);
+  --vp-c-border: rgba(247, 143, 179, 0.35);
+  --vp-c-gutter: rgba(195, 155, 211, 0.25);
+
+  --vp-c-default-1: var(--pcb-purple);
+  --vp-c-default-2: var(--pcb-purple-deep);
+  --vp-c-default-3: #7d5ba6;
+  --vp-c-default-soft: rgba(195, 155, 211, 0.2);
+
+  --vp-c-tip-1: #00b894;
+  --vp-c-tip-2: #00a884;
+  --vp-c-tip-3: #008f72;
+  --vp-c-tip-soft: rgba(116, 185, 255, 0.15);
+
+  --vp-c-warning-1: #f9ca24;
+  --vp-c-warning-2: #f1c40f;
+  --vp-c-warning-soft: rgba(255, 234, 167, 0.35);
+
+  --vp-c-danger-1: #ff7675;
+  --vp-c-danger-soft: rgba(255, 118, 117, 0.12);
+
+  --vp-c-sponsor: var(--pcb-pink);
+
+  --vp-button-brand-bg: linear-gradient(135deg, #f78fb3 0%, #c39bd3 100%);
+  --vp-button-brand-hover-bg: linear-gradient(135deg, #ff9ebb 0%, #d4b8e8 100%);
+  --vp-button-brand-active-bg: var(--pcb-pink-deep);
+
+  --vp-nav-bg-color: rgba(255, 248, 251, 0.9);
+  --vp-nav-logo-text-color: var(--pcb-pink-deep);
+  --vp-nav-title-text-color: #5c4d6a;
+
+  --vp-local-nav-bg-color: rgba(255, 248, 251, 0.95);
+
+  --vp-sidebar-bg-color: var(--pcb-blush);
+  --vp-sidebar-active-bg: rgba(247, 143, 179, 0.12);
+
+  /* 浅色模式：亮底 + 深色字，避免「黑底黑字」 */
+  --vp-code-block-bg: #faf4f8;
+  --vp-code-block-color: #3d3548;
+  --vp-code-copy-code-bg: rgba(247, 143, 179, 0.25);
+  --vp-code-copy-code-hover-bg: rgba(247, 143, 179, 0.4);
+
+  --vp-custom-block-info-bg: rgba(116, 185, 255, 0.1);
+  --vp-custom-block-info-border: var(--pcb-sky);
+  --vp-custom-block-tip-bg: rgba(129, 236, 236, 0.12);
+  --vp-custom-block-tip-border: #81ecec;
+  --vp-custom-block-warning-bg: rgba(255, 234, 167, 0.25);
+  --vp-custom-block-warning-border: var(--pcb-yellow);
+
+  --nest-accent: var(--pcb-pink);
+  --nest-accent-soft: var(--pcb-blush);
+  --nest-ink-muted: var(--vp-c-text-2);
+  --nest-bg-image: none;
+  --nest-bg-blur: 10px;
+  --nest-bg-overlay: rgba(255, 248, 251, 0.85);
 }
 
 .dark {
-  --vp-c-brand-1: #60a5fa;
-  --vp-c-brand-2: #3b82f6;
-  --vp-c-brand-3: #2563eb;
+  --vp-c-brand-1: #f8a5c2;
+  --vp-c-brand-2: #ffb3d1;
+  --vp-c-brand-3: #e889ad;
+  --vp-c-brand-soft: rgba(248, 165, 194, 0.15);
+
+  --vp-c-bg: #2d2a2e;
+  --vp-c-bg-alt: #353238;
+  --vp-c-bg-elv: #3b383e;
+  --vp-c-bg-soft: #323035;
+  --vp-c-bg-mute: #3d3942;
+
+  --vp-c-text-1: #f5eef8;
+  --vp-c-text-2: #c9b8d4;
+  --vp-c-text-3: #9b8cab;
+
+  --vp-c-divider: rgba(195, 155, 211, 0.25);
+  --vp-c-border: rgba(248, 165, 194, 0.2);
+
+  --vp-nav-bg-color: rgba(45, 42, 46, 0.92);
+  --vp-nav-logo-text-color: #f8a5c2;
+  --vp-local-nav-bg-color: rgba(45, 42, 46, 0.95);
+  --vp-sidebar-bg-color: #323035;
+
+  /* 深色模式：Monokai 系底 + 亮色高亮 */
+  --vp-code-block-bg: #2d2a2e;
+  --vp-code-block-color: #f8f8f2;
+  --vp-code-copy-code-bg: rgba(248, 165, 194, 0.2);
+
+  --nest-accent: #f8a5c2;
+  --nest-accent-soft: rgba(248, 165, 194, 0.1);
+  --nest-bg-overlay: rgba(45, 42, 46, 0.88);
 }
 
-.VPHome .name {
-  background: var(--vp-home-hero-name-background);
-  -webkit-background-clip: text;
-  background-clip: text;
+/* 顶栏：Pink-Cat-Boo 粉紫底边 + 活动 tab 顶边高亮 */
+.VPNav {
+  backdrop-filter: blur(12px);
 }
 
-.VPHero .image-container {
+.VPNavBar {
+  border-bottom: 1px solid rgba(247, 143, 179, 0.35);
+}
+
+.VPNavBarMenuLink.active,
+.VPNavBarMenuLink:hover {
+  color: var(--vp-c-brand-1) !important;
+}
+
+.VPNavBarMenuGroup .button[aria-expanded='true'],
+.VPNavBarMenuGroup .button:hover {
+  color: var(--vp-c-brand-1);
+}
+
+/* 侧边栏激活项：主题特色顶边色条 */
+.VPSidebarItem.level-0.is-active > .item > .link > .text,
+.VPSidebarItem.level-1.is-active > .item > .link > .text {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+.VPSidebarItem.is-active > .item > .link {
+  border-top: 2px solid var(--vp-c-brand-1);
+  border-radius: 4px 4px 0 0;
+  background: var(--vp-c-brand-soft);
+}
+
+/* 正文链接 */
+.vp-doc a {
+  color: var(--pcb-pink-deep);
+  text-decoration-color: rgba(224, 86, 160, 0.35);
+}
+
+.dark .vp-doc a {
+  color: #ffb3d1;
+}
+
+.vp-doc a:hover {
+  color: var(--vp-c-brand-1);
+}
+
+/* 标题点缀 */
+.vp-doc h1 {
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, var(--pcb-pink), var(--pcb-purple), var(--pcb-sky)) 1;
+  padding-bottom: 0.35rem;
+}
+
+.vp-doc h2 {
+  color: var(--vp-c-brand-2);
+}
+
+/* 行内代码 */
+.vp-doc :not(pre) > code {
+  background: rgba(247, 143, 179, 0.12);
+  color: var(--pcb-pink-deep);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+
+.dark .vp-doc :not(pre) > code {
+  background: rgba(248, 165, 194, 0.15);
+  color: #ffb3d1;
+}
+
+/* 代码块：边框、对比度、行号 */
+.vp-doc div[class*='language-'],
+.vp-doc pre {
+  border: 1px solid rgba(247, 143, 179, 0.35);
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(195, 155, 211, 0.12);
+}
+
+.vp-doc pre,
+.vp-doc pre code {
+  color: var(--vp-code-block-color);
+}
+
+/* 浅色模式强制使用亮色语法主题 */
+html:not(.dark) .vp-doc .shiki.dark,
+html:not(.dark) .vp-doc span[class='twoslash-dark'] {
+  display: none;
+}
+
+html:not(.dark) .vp-doc .shiki.light {
+  background-color: var(--vp-code-block-bg) !important;
+}
+
+html:not(.dark) .vp-doc .shiki.light code {
+  color: var(--vp-code-block-color);
+}
+
+/* 深色模式强制使用暗色语法主题 */
+html.dark .vp-doc .shiki.light,
+html.dark .vp-doc span[class='twoslash-light'] {
+  display: none;
+}
+
+html.dark .vp-doc .shiki.dark {
+  background-color: var(--vp-code-block-bg) !important;
+}
+
+html.dark .vp-doc .shiki.dark code {
+  color: var(--vp-code-block-color);
+}
+
+/* 行号可读性 */
+.vp-doc .line-numbers-wrapper {
+  color: var(--vp-c-text-3);
+  border-right-color: var(--vp-c-divider);
+}
+
+/* 搜索框 */
+.VPLocalSearchBox {
+  border-color: rgba(247, 143, 179, 0.4);
+}
+
+/* 页脚 */
+.VPFooter {
+  border-top: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+}
+
+/* 首页巢穴 */
+.nest-home {
+  max-width: 42rem;
+  padding-bottom: 3rem;
+}
+
+.nest-home .nest-title {
+  font-family: var(--vp-font-family-base);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 0.35rem;
+  color: var(--vp-c-text-1);
+  border: none;
+}
+
+.nest-home .nest-lead {
+  font-size: 1.15rem;
+  color: var(--vp-c-brand-1);
+  margin: 0 0 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.nest-meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  gap: 0.35rem 0.5rem;
+  font-size: 0.875rem;
+  color: var(--nest-ink-muted);
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px dashed var(--vp-c-divider);
 }
 
-.VPHero .image-container img {
-  max-width: 280px;
-  filter: drop-shadow(0 12px 24px rgba(59, 130, 246, 0.25));
+.nest-meta-dot {
+  opacity: 0.45;
+}
+
+.nest-home h2 {
+  margin-top: 2.5rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--pcb-purple-deep);
+}
+
+.dark .nest-home h2 {
+  color: #e8dff5;
+}
+
+.nest-home h2:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.nest-home h3 {
+  font-size: 1rem;
+  color: var(--vp-c-brand-2);
+  margin-top: 1.75rem;
+  font-weight: 600;
+}
+
+.nest-home blockquote {
+  margin: 1rem 0 1.25rem;
+  padding: 0.85rem 1.1rem;
+  border-left: 3px solid var(--pcb-pink);
+  background: linear-gradient(90deg, var(--pcb-blush), var(--pcb-lilac));
+  border-radius: 0 10px 10px 0;
+  font-size: 0.95rem;
+  color: var(--vp-c-text-2);
+}
+
+.dark .nest-home blockquote {
+  background: linear-gradient(90deg, rgba(248, 165, 194, 0.08), rgba(195, 155, 211, 0.1));
+}
+
+.nest-home blockquote p {
+  margin: 0;
+}
+
+.nest-home > p {
+  line-height: 1.85;
+  margin: 0.85rem 0;
+}
+
+.nest-cta {
+  text-align: center;
+  margin: 2rem 0 0.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--pcb-blush) 0%, var(--pcb-lilac) 100%);
+  border: 1px solid rgba(247, 143, 179, 0.35);
+  box-shadow: 0 4px 16px rgba(247, 143, 179, 0.12);
+}
+
+.nest-cta a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--pcb-pink-deep);
+}
+
+.nest-cta a:hover {
+  color: var(--vp-c-brand-1);
+}
+
+.nest-cta-sep {
+  margin: 0 0.35rem;
+  color: var(--vp-c-text-3);
+}
+
+.nest-stats table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nest-stats td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px dashed var(--vp-c-divider);
+}
+
+.nest-stats td:first-child {
+  width: 5rem;
+  font-weight: 600;
+  color: var(--pcb-purple-deep);
+}
+
+.dark .nest-stats td:first-child {
+  color: #e8dff5;
+}
+
+.nest-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+}
+
+.nest-timeline li {
+  padding: 0.65rem 0 0.65rem 1rem;
+  border-left: 2px solid var(--pcb-pink);
+  line-height: 1.65;
+}
+
+.nest-date {
+  display: inline-block;
+  min-width: 5.5rem;
+  margin-right: 0.5rem;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.8rem;
+  font-family: var(--vp-font-family-mono);
+  color: var(--pcb-pink-deep);
+  background: var(--pcb-blush);
+  border-radius: 6px;
+}
+
+.dark .nest-date {
+  color: #ffb3d1;
+  background: rgba(248, 165, 194, 0.12);
+}
+
+.nest-timeline-muted li {
+  border-left-color: var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+  font-size: 0.92rem;
+}
+
+.VPDoc:has(.nest-home) .pager,
+.VPDoc:has(.nest-home) .edit-link {
+  display: none;
+}
+
+/* 仅首页背景 */
+.VPDoc:has(.nest-home) .container {
+  position: relative;
+}
+
+.VPDoc:has(.nest-home) .container::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image: var(--nest-bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: blur(var(--nest-bg-blur));
+  transform: scale(1.06);
+  pointer-events: none;
+}
+
+.VPDoc:has(.nest-home) .container::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: var(--nest-bg-overlay);
+  pointer-events: none;
+}
+
+.VPDoc:has(.nest-home) .content {
+  position: relative;
+}
+
+/* ========== 猫咪装饰 ========== */
+
+/* 猫爪底纹：仅首页（笔记/随笔页不显示） */
+.VPDoc:has(.nest-home)::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  background-image: var(--cat-paw-pattern, none);
+  background-size: 96px 96px;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.dark .VPDoc:has(.nest-home)::before {
+  opacity: 0.2;
+}
+
+/* 顶栏标题猫耳 */
+.VPNavBarTitle .title {
+  position: relative;
+  padding-top: 4px;
+}
+
+.VPNavBarTitle .title::before,
+.VPNavBarTitle .title::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 11px solid var(--pcb-pink);
+  opacity: 0.9;
+}
+
+.VPNavBarTitle .title::before {
+  left: -4px;
+  transform: rotate(-12deg);
+}
+
+.VPNavBarTitle .title::after {
+  right: -4px;
+  transform: rotate(12deg);
+}
+
+.VPNav .VPImage.logo {
+  filter: drop-shadow(0 2px 4px rgba(247, 143, 179, 0.35));
+}
+
+/* 首页右下角猫咪 */
+.cat-decor {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 30;
+  pointer-events: none;
+}
+
+.cat-mascot {
+  width: 100px;
+  height: auto;
+  filter: drop-shadow(0 8px 20px rgba(247, 143, 179, 0.35));
+  animation: cat-float 4s ease-in-out infinite;
+}
+
+.cat-paw {
+  position: absolute;
+  font-size: 1.1rem;
+  opacity: 0.55;
+  animation: paw-fade 3s ease-in-out infinite;
+}
+
+.cat-paw-a {
+  top: -8px;
+  left: -12px;
+  transform: rotate(-25deg);
+}
+
+.cat-paw-b {
+  bottom: 20px;
+  right: -16px;
+  transform: rotate(15deg);
+  animation-delay: 1.2s;
+}
+
+@keyframes cat-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes paw-fade {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.75;
+  }
+}
+
+/* 首页标题小猫印 */
+.nest-home .nest-title::before {
+  content: '🐾 ';
+  font-size: 0.85em;
+  opacity: 0.85;
+}
+
+.nest-cat-badge {
+  padding: 0.15rem 0.55rem;
+  background: linear-gradient(135deg, var(--pcb-blush), var(--pcb-lilac));
+  border-radius: 999px;
+  border: 1px solid rgba(247, 143, 179, 0.45);
+  font-size: 0.82rem;
+}
+
+/* 文档页引用块猫耳 */
+.vp-doc blockquote {
+  border-left-color: var(--pcb-pink);
+  border-radius: 0 12px 12px 0;
+  position: relative;
+}
+
+.vp-doc blockquote::before {
+  content: 'ฅ';
+  position: absolute;
+  left: 0.65rem;
+  top: -0.65rem;
+  font-size: 1rem;
+  color: var(--pcb-pink);
+  opacity: 0.7;
+}
+
+.vp-doc blockquote > :first-child {
+  margin-top: 0.25rem;
+}
+
+/* 侧边栏分组标题前猫爪 */
+.VPSidebar .group + .group .item .text::first-letter {
+  font-size: inherit;
+}
+
+.VPSidebarItem.level-0 > .item .link > .text::before {
+  content: '🐾 ';
+  font-size: 0.75em;
+  opacity: 0.65;
+}
+
+/* 页脚猫尾巴 */
+.VPFooter .message::after {
+  content: ' ฅ(^•ω•^)ฅ';
+  opacity: 0.65;
+  font-size: 0.9em;
+}
+
+/* 粉色猫爪滚动条（Webkit） */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--pcb-pink), var(--pcb-purple));
+  border-radius: 999px;
+  border: 2px solid var(--vp-c-bg);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-soft);
+}
+
+@media (max-width: 768px) {
+  .cat-mascot {
+    width: 72px;
+  }
+
+  .cat-decor {
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+
+  .VPNavBarTitle .title::before,
+  .VPNavBarTitle .title::after {
+    display: none;
+  }
 }

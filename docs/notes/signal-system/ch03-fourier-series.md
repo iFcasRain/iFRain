@@ -1,4 +1,4 @@
-﻿# 信号与系统 第三章：周期信号的傅里叶级数表示
+# 信号与系统 第三章：周期信号的傅里叶级数表示
 
 ---
 
@@ -142,7 +142,7 @@ $$
 x(t)=1+\frac{1}{2}\cos 2\pi t+\cos 4\pi t+\frac{2}{3}\cos 6\pi t
 $$
 
-<img src="/assets/image-20260506110002272.png" alt="image-20260506110002272" style="zoom:67%;" />
+![](/assets/image-20260506110002272.png)
 
 ### 二、频谱概念
 
@@ -150,7 +150,7 @@ $$
 
 例：$\cos\omega_0 t=\dfrac{1}{2}e^{\mathrm{j}\omega_0 t}+\dfrac{1}{2}e^{-\mathrm{j}\omega_0 t}$，在 $k=\pm1$ 处幅度均为 $\dfrac{1}{2}$。
 
-<img src="/assets/image-20260506110153543.png" alt="image-20260506110153543" style="zoom:67%;" />
+![](/assets/image-20260506110153543.png)
 
 ### 系数为复数时
 
@@ -162,7 +162,7 @@ $$
 x(t)=1+\sin\omega_0 t+2\cos\omega_0 t+\cos\left(2\omega_0 t+\frac{\pi}{4}\right)
 $$
 
-<img src="/assets/image-20260506111652833.png" alt="image-20260506111652833" style="zoom:67%;" />
+![](/assets/image-20260506111652833.png)
 
 ### 三、系数的确定
 
@@ -223,7 +223,7 @@ $$
 
 二者零点位置不同（$\mathrm{Sa}$ 在 $x=\pm n\pi$；$\mathrm{sinc}$ 在 $x=\pm n$）。占空比变化时，谱线包络相同但采样密度与幅度尺度改变（课件图）。
 
-<img src="/assets/image-20260506114351061.png" alt="image-20260506114351061" style="zoom:67%;" />
+![](/assets/image-20260506114351061.png)
 
 ---
 
@@ -254,15 +254,15 @@ $$
 
 **结论：** 满足 Dirichlet 条件时，在连续点傅里叶级数等于 $x(t)$；在跳跃间断点收敛到**左右极限的平均**。平方可积与 Dirichlet 两组条件**不等价**，但均为收敛的**充分条件**。
 
-<img src="/assets/image-20260506151743009.png" alt="image-20260506151743009" style="zoom:67%;" />
+![](/assets/image-20260506151743009.png)
 
 ### 三、Gibbs 现象
 
 对有跳跃间断且满足 Dirichlet 的信号，傅里叶部分和在间断附近出现振荡与**超量**；超量幅度**不随项数 $N$ 增大而消失**，仅振荡频率升高并向间断点压缩，所占能量减小。均方意义下仍收敛。
 
-<img src="/assets/image-20260506152344705.png" alt="image-20260506152344705" style="zoom:67%;" />
+![](/assets/image-20260506152344705.png)
 
-<img src="/assets/image-20260506152355624.png" alt="image-20260506152355624" style="zoom:67%;" />
+![](/assets/image-20260506152355624.png)
 
 
 
@@ -286,7 +286,7 @@ $\displaystyle\sum_{k=\langle N\rangle}$ 表示任取连续 $N$ 个 $k$（一个
 
 **三角组合例：** $x[n]=\cos(\pi n/8)+\cos(\pi n/4+\pi/4)$，周期 $N=16$，$\omega_0=\pi/8$，展开后读出 $a_k$，注意 $a_{k+N}=a_k$ 的周期性。
 
-<img src="/assets/image-20260506161942456.png" alt="image-20260506161942456" style="zoom:67%;" />
+![](/assets/image-20260506161942456.png)
 
 **一般推导：** 乘 $e^{-\mathrm{j}\frac{2\pi}{N}rn}$ 并对 $n$ 在一个周期求和，利用正交性得
 $$

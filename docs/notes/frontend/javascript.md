@@ -1,4 +1,4 @@
-﻿# JavaScript
+# JavaScript
 
 ## JavaScript介绍
 
@@ -16,7 +16,7 @@
 
 ③组成：
 
-<img src="/assets/image-20260413173333382.png" alt="image-20260413173333382" style="zoom:50%;" />
+![](/assets/image-20260413173333382.png)
 
 ![image-20260413173433171.png](/assets/image-20260413173433171.png)
 

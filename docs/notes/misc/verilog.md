@@ -1,8 +1,8 @@
-﻿# Verilog
+# Verilog
 
 ## *模块结构*
 
-<img src="/assets/image-20251117215236588.png" alt="image-20251117215236588" style="zoom: 50%;" />
+![](/assets/image-20251117215236588.png)
 
 **1.** 2选1多路选择器的Verilog描述
 
@@ -59,59 +59,59 @@ assign y=a;
 assign y=a&b;
 ```
 
-<img src="/assets/image-20251117221002122.png" alt="image-20251117221002122" style="zoom:67%;" />
+![](/assets/image-20251117221002122.png)
 
-<img src="/assets/image-20251117221133799.png" alt="image-20251117221133799" style="zoom:67%;" />
+![](/assets/image-20251117221133799.png)
 
 **1.** **算术型**
 
-<img src="/assets/image-20251117221228021.png" alt="image-20251117221228021" style="zoom:67%;" />
+![](/assets/image-20251117221228021.png)
 
 **2.** **逻辑型**
 
-<img src="/assets/image-20251117221414370.png" alt="image-20251117221414370" style="zoom:50%;" />
+![](/assets/image-20251117221414370.png)
 
 ![image-20251117221453849.png](/assets/image-20251117221453849.png)
 
 **3.** **关系型**
 
-<img src="/assets/image-20251117221654344.png" alt="image-20251117221654344" style="zoom:50%;" />
+![](/assets/image-20251117221654344.png)
 
 **4.** **等价型**
 
-<img src="/assets/image-20251117221757427.png" alt="image-20251117221757427" style="zoom:50%;" />
+![](/assets/image-20251117221757427.png)
 
 ![image-20251117221821228.png](/assets/image-20251117221821228.png)
 
 **5.** **按位运算型**
 
-<img src="/assets/image-20251117221940655.png" alt="image-20251117221940655" style="zoom:50%;" />
+![](/assets/image-20251117221940655.png)
 
 ![image-20251117221950194.png](/assets/image-20251117221950194.png)
 
-<img src="/assets/image-20251117222014619.png" alt="image-20251117222014619" style="zoom:67%;" />
+![](/assets/image-20251117222014619.png)
 
 **6.** **缩减运算型**
 
-<img src="/assets/image-20251117222203210.png" alt="image-20251117222203210" style="zoom:50%;" />
+![](/assets/image-20251117222203210.png)
 
 ![image-20251117222213327.png](/assets/image-20251117222213327.png)
 
 **7.** **移位运算型**
 
-<img src="/assets/image-20251117222322286.png" alt="image-20251117222322286" style="zoom:50%;" />
+![](/assets/image-20251117222322286.png)
 
 ![image-20251117222331316.png](/assets/image-20251117222331316.png)
 
 **8.** **拼接复制运算型**
 
-<img src="/assets/image-20251117222459077.png" alt="image-20251117222459077" style="zoom:33%;" />
+![](/assets/image-20251117222459077.png)
 
 ![image-20251117222518670.png](/assets/image-20251117222518670.png)
 
 **9.条件运算符**
 
-<img src="/assets/image-20251117222621063.png" alt="image-20251117222621063" style="zoom:33%;" />
+![](/assets/image-20251117222621063.png)
 
 ## **always语句块**
 
@@ -190,9 +190,9 @@ module DFF2 (CLK,D,Q,RST,EN)
 
 ![image-20251118081139198.png](/assets/image-20251118081139198.png)
 
-<img src="/assets/image-20251118081226718.png" alt="image-20251118081226718" style="zoom:33%;" />
+![](/assets/image-20251118081226718.png)
 
-<img src="/assets/image-20251118081244794.png" alt="image-20251118081244794" style="zoom:67%;" />
+![](/assets/image-20251118081244794.png)
 
 - 端口映射方法
 
@@ -216,7 +216,7 @@ module DFF2 (CLK,D,Q,RST,EN)
 
 **门原语调用格式：** 门原语名   实例名   （端口连接）
 
-​		例：and(out,in1,in2)	<img src="/assets/image-20251118082213428.png" alt="image-20251118082213428" style="zoom:50%;" />  
+​		例：and(out,in1,in2)	![](/assets/image-20251118082213428.png)  
 
 ## Verilog 中的数据类型
 
@@ -228,7 +228,7 @@ module DFF2 (CLK,D,Q,RST,EN)
 
 ### 变量类（variable)
 
-<img src="/assets/image-20251118082510016.png" alt="image-20251118082510016" style="zoom:67%;" />
+![](/assets/image-20251118082510016.png)
 
 
 
@@ -252,7 +252,7 @@ module DFF2 (CLK,D,Q,RST,EN)
 
 ## 逻辑值
 
-<img src="/assets/image-20251118083343523.png" alt="image-20251118083343523" style="zoom:80%;" />
+![](/assets/image-20251118083343523.png)
 
 ## if语句
 

@@ -3,6 +3,7 @@ $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
 $docs = Join-Path $root "docs\notes"
 
+# 固定路径映射
 $maps = @{
     (Join-Path $root "..\信号与系统\信号与系统.md")                         = "$docs\signal-system\overview.md"
     (Join-Path $root "..\信号与系统\第二章_线性时不变系统.md")               = "$docs\signal-system\ch02-lti.md"
@@ -18,15 +19,49 @@ $maps = @{
     (Join-Path $root "..\Verilog.md")                                    = "$docs\misc\verilog.md"
 }
 
-foreach ($pair in $maps.GetEnumerator()) {
-    $src = [System.IO.Path]::GetFullPath($pair.Key)
-    $dst = $pair.Value
-    if (Test-Path $src) {
-        Copy-Item $src $dst -Force
-        Write-Host "OK: $src -> $dst"
-    } else {
+# 操作系统 / 人工智能（通过快捷方式指向网课笔记目录）
+$folderMaps = @(
+    @{ Lnk = "..\操作系统.lnk"; DstDir = "$docs\os"; Files = @{
+            "操作系统.md"           = "overview.md"
+            "操作系统原理习题库.md" = "exercises.md"
+        }
+    }
+    @{ Lnk = "..\人工智能.lnk"; DstDir = "$docs\ai"; Files = @{
+            "人工智能.md"   = "overview.md"
+            "归结原理.md"   = "resolution.md"
+            "Python\Python1.md" = "python\python1.md"
+        }
+    }
+)
+
+function Copy-IfExists($src, $dst) {
+    $src = [System.IO.Path]::GetFullPath($src)
+    if (-not (Test-Path -LiteralPath $src)) {
         Write-Warning "Skip (missing): $src"
+        return
+    }
+    $dir = Split-Path $dst -Parent
+    if ($dir) { New-Item -ItemType Directory -Force -Path $dir | Out-Null }
+    Copy-Item -LiteralPath $src -Destination $dst -Force
+    Write-Host "OK: $src -> $dst"
+}
+
+foreach ($pair in $maps.GetEnumerator()) {
+    Copy-IfExists $pair.Key $pair.Value
+}
+
+$shell = New-Object -ComObject WScript.Shell
+foreach ($fm in $folderMaps) {
+    $lnkPath = Join-Path $root $fm.Lnk
+    if (-not (Test-Path -LiteralPath $lnkPath)) {
+        Write-Warning "Skip (no shortcut): $lnkPath"
+        continue
+    }
+    $srcRoot = $shell.CreateShortcut((Resolve-Path -LiteralPath $lnkPath).Path).TargetPath
+    foreach ($entry in $fm.Files.GetEnumerator()) {
+        Copy-IfExists (Join-Path $srcRoot $entry.Key) (Join-Path $fm.DstDir $entry.Value)
     }
 }
 
 Write-Host "Sync complete."
+Write-Host "Next: .\scripts\fix-typora-images.ps1"

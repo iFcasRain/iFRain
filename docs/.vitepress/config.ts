@@ -4,8 +4,8 @@ import { defineConfig } from 'vitepress'
 const base = process.env.VITEPRESS_BASE || '/'
 
 export default defineConfig({
-  title: '个人笔记站',
-  description: '学习笔记与个人随笔',
+  title: '浮生若梦',
+  description: '前往明天以外 · 笔记、杂学与随笔',
   lang: 'zh-CN',
   base,
   cleanUrls: true,
@@ -13,6 +13,10 @@ export default defineConfig({
   markdown: {
     math: true,
     lineNumbers: true,
+    theme: {
+      light: 'github-light',
+      dark: 'monokai',
+    },
   },
   head: [
     ['link', { rel: 'icon', href: `${base}favicon.svg`, type: 'image/svg+xml' }],
@@ -25,8 +29,8 @@ export default defineConfig({
     ],
   ],
   themeConfig: {
-    logo: '/favicon.svg',
-    siteTitle: '个人笔记站',
+    logo: '/cat-logo.svg',
+    siteTitle: '浮生若梦',
     outline: { level: [2, 3] },
     search: {
       provider: 'local',
@@ -52,6 +56,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '笔记', link: '/notes/' },
+      { text: '杂学', link: '/interest/' },
       { text: '随笔', link: '/essays/' },
       { text: '关于', link: '/about' },
     ],
@@ -78,6 +83,23 @@ export default defineConfig({
           ],
         },
         {
+          text: '操作系统',
+          collapsed: false,
+          items: [
+            { text: '原理笔记', link: '/notes/os/overview' },
+            { text: '习题库', link: '/notes/os/exercises' },
+          ],
+        },
+        {
+          text: '人工智能',
+          collapsed: false,
+          items: [
+            { text: '课程笔记', link: '/notes/ai/overview' },
+            { text: '归结原理实验', link: '/notes/ai/resolution' },
+            { text: 'Python 基础', link: '/notes/ai/python/python1' },
+          ],
+        },
+        {
           text: 'Agent 开发',
           collapsed: true,
           items: [
@@ -94,6 +116,23 @@ export default defineConfig({
           ],
         },
       ],
+      '/interest/': [
+        {
+          text: '杂学',
+          collapsed: false,
+          items: [{ text: '栏目说明', link: '/interest/' }],
+        },
+        {
+          text: '哲学',
+          collapsed: false,
+          items: [{ text: '阅读索引', link: '/interest/philosophy/introduction' }],
+        },
+        {
+          text: '心理学',
+          collapsed: false,
+          items: [{ text: '阅读索引', link: '/interest/psychology/introduction' }],
+        },
+      ],
       '/essays/': [
         {
           text: '随笔',
@@ -103,11 +142,11 @@ export default defineConfig({
     },
     socialLinks: [
       // 将下方链接改为你的 GitHub 主页
-      { icon: 'github', link: 'https://github.com/YOUR_USERNAME' },
+      { icon: 'github', link: 'https://github.com/iFcasRain/iFRain' },
     ],
     footer: {
-      message: '基于 VitePress 构建 · 托管于 GitHub Pages',
-      copyright: `Copyright © ${new Date().getFullYear()}`,
+      message: 'Pink-Cat-Boo 配色 · VitePress · GitHub Pages',
+      copyright: `Copyright © ${new Date().getFullYear()} · 浮生若梦`,
     },
     docFooter: { prev: '上一篇', next: '下一篇' },
     lastUpdated: {

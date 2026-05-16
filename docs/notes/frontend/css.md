@@ -1,4 +1,4 @@
-﻿# CSS
+# CSS
 
 ## 简介
 
@@ -6,7 +6,7 @@
 
 用于定义网页样式和布局的样式表语言
 
-<img src="/assets/image-20260414082642486.png" alt="image-20260414082642486" style="zoom:67%;" />
+![](/assets/image-20260414082642486.png)
 
 ## CSS语法
 
