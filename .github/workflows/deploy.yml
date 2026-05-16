@@ -32,9 +32,9 @@ jobs:
       - name: Build site
         run: npm run build
         env:
-          # 用户主页仓库 username.github.io 使用 '/'
-          # 项目站改为 '/仓库名/'，例如 '/personal-notes-site/'
-          VITEPRESS_BASE: /
+          # 项目站：仓库名 iFRain → base 为 /iFRain/
+          # 若改用 用户名.github.io 仓库，改回 /
+          VITEPRESS_BASE: /iFRain/
 
       - uses: actions/upload-pages-artifact@v3
         with:
